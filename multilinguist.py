@@ -86,6 +86,12 @@ class MathGenius(Multilinguist):
             sum +=i
        return 'The total is' + ' ' + str(sum)
 
+      def multiply_total(self,lst):
+        sum = 1
+        for i in lst:
+            sum *=i
+        return 'The multiple is' + ' ' + str(sum)
+
 class QuoteCollector(Multilinguist):
       def __init__(self):
        self.collection = [] 
@@ -107,6 +113,7 @@ print(me.language_in('Canada'))
 print(me.say_in_local_language(me.report_total([23,45,676,34,5778,4,23,5465]))) # The total is 12048
 me.travel_to("India")
 print(me.say_in_local_language(me.report_total([6,3,6,68,455,4,467,57,4,534]))) # है को कुल 1604
+print(me.multiply_total([6,3,6,68,455,4,467,57,4,534]))
 me.travel_to("Italy")
 print(me.say_in_local_language(me.report_total([324,245,6,343647,686545]))) # È Il totale 1030767
 
